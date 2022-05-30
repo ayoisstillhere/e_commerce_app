@@ -1,0 +1,27 @@
+import 'package:e_commerce_app/constants.dart';
+import 'package:e_commerce_app/screens/home/home_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import 'package:e_commerce_app/enums.dart';
+
+import '../../components/custom_bottom_navbar.dart';
+import 'components/body.dart';
+
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
+  static String routeName = '/profile';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Profile"),
+      ),
+      body: Body(),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.profile,),
+    );
+  }
+}
+
